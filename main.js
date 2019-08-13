@@ -18,3 +18,7 @@ function buypixelsPerClick() {
     document.getElementById("perClickUpgrade").innerHTML = "Upgrade Computer (Level " + gameData.pixelsPerClick + ") Cost : " + gameData.pixelsPerClickCost + " Pixels"
   }
 }
+
+var mainGameLoop = window.setInterval(function() {
+ renderpixels()
+}, 1000)
