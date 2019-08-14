@@ -1,8 +1,9 @@
 var gameData = {
   pixels: 0,
   pixelsPerClick: 1,
-  pixelsPerClickCost: 10
-}
+  pixelsPerClickCost: 10,
+  percupgr: 0
+  }
 
 function renderpixels() {
   gameData.pixels += gameData.pixelsPerClick
@@ -21,16 +22,16 @@ function buypixelsPerClick() {
 
 function move() {
   var elem = document.getElementById("myBar"); 
-  var width = 0;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width >= 100) {
-      clearInterval(id);
-    } else {
-      width ++; 
-      elem.style.width = width + '%'; 
+  
+    gameData.percupgr = gameData.pixels / gameData.pixelsPerClickCost;
+	gameData.percupgr = gameData.percupgr * 100;
+	if (gameData.percupgr >= 100) {
+	  elem.style.width = 100 + '%';
+    } 
+	else {
+      elem.style.width = gameData.percupgr + '%'; 
     }
-  }
+  
 }
 
 var mainGameLoop = window.setInterval(function() {

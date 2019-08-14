@@ -54,8 +54,9 @@
 }
 
 #myProgress {
-  width: 50%;
+  width: 26%;
   background-color: grey;
+  margin-bottom: 30px;
 }
 
 #myBar {
@@ -72,12 +73,14 @@
 	
 	<center> 
 		
-		<div id="myProgress">
-		<div id="myBar"></div>
-		</div>
+		
 		
 		<p class="TEXT" id="pixelsrendered"> 0 Pixels Rendered </p>     
 		<button class="buttonrender" onclick="renderpixels()">Render Pixels</button>
+		<p class="TEXT" id="pixelsrendered">Upgrades</p>
+		<div id="myProgress">
+		<div id="myBar"></div>
+		</div>
 		<button class="buttonupgrade" onclick="buypixelsPerClick()" id="perClickUpgrade" >Upgrade Computer (Level 1) Cost: 10 Pixels</button>
 	
 	</center>
