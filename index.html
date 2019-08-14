@@ -3,11 +3,63 @@
   <head>
     <meta charset="utf-8">
     <title>First Clicker</title>
+  
+  <style>
+.buttonrender {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.buttonupgrade {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #CCAA00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.TEXT {
+  color: darkred;
+  line-height: 2;
+  font-size: 50px;
+}
+
+</style>
+  
   </head>
   <body>
-      <p id="pixelsrendered"> 0 Pixels Rendered </p>
-      <button onclick="renderpixels()">Render Pixels</button>
-      <button onclick="buypixelsPerClick()" id="perClickUpgrade" >Upgrade Computer (Level 1) Cost: 10 Pixels</button>
+      <p class="TEXT" id="pixelsrendered"> 0 Pixels Rendered </p>
+      <button class="buttonrender" onclick="renderpixels()">Render Pixels</button>
+      <button class="buttonupgrade" onclick="buypixelsPerClick()" id="perClickUpgrade" >Upgrade Computer (Level 1) Cost: 10 Pixels</button>
     <script src="main.js" charset="utf-8" type="text/javascript"></script>
   </body>
 </html>
